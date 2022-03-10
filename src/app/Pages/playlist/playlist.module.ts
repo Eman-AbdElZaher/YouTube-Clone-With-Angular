@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { SharedModule } from 'src/app/shared/shared.module';

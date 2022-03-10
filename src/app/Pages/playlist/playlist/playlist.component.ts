@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { IVideo } from 'src/app/Models/video';
 import WatchVideos from 'src/assets/AppData/Watch.json';
 import LikedVideos from 'src/assets/AppData/Liked.json';
@@ -14,14 +14,21 @@ export class PlaylistComponent implements OnInit {
   Playlistvideos:IVideo[];
   lastImg:string;
   title:string;
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,
+    private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = function() {
+      return false;
+    };
+   }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((params:ParamMap)=>
+    this.route.queryParams.subscribe((param)=>
     {
-      this.playlistType=params.get('list');
+      this.playlistType=param['list'];
     });
+    console.log(this.playlistType);
      this.title = this.playlistType === "WL"?"Watch Later":"Liked Videos";
+     console.log(this.title);
      this.Playlistvideos=this.getPlaylistVideosBasedOnType();
     this.lastImg = this.Playlistvideos[0].image;
   }

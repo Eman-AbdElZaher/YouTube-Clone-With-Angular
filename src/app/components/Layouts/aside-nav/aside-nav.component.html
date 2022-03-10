@@ -40,13 +40,23 @@
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/playlist/WL" class="nav-link">
+        <a
+          routerLink="/playlist"
+          [queryParams]="{ list: 'WL' }"
+          routerLinkActive="active"
+          class="nav-link"
+        >
           <i class="material-icons-outlined"> watch_later </i>
           <span>watch later</span>
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/playlist/LL" routerLinkActive="active" class="nav-link">
+        <a
+          routerLink="/playlist"
+          [queryParams]="{ list: 'LL' }"
+          routerLinkActive="active"
+          class="nav-link"
+        >
           <i class="material-icons-outlined">thumb_up</i>
           <span>Liked Videos</span>
         </a>
