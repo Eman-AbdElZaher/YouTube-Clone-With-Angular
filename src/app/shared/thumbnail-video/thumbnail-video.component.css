@@ -1,0 +1,37 @@
+.thumbnail-video {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.video-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7px;
+}
+.video-details {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+app-video-poster {
+  max-width: 270px;
+  margin-right: 20px;
+  flex-basis: 25%;
+}
+.channel-name {
+  margin-right: 5px;
+}
+.channel-name a,
+.vd-meta span {
+  font-family: "Roboto", "Arial", sans-serif;
+  display: inline-block;
+  color: #606060;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 18px;
+}
+.channel-name a:hover {
+  color: #333;
+}

@@ -1,0 +1,15 @@
+h2 {
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.watch-history {
+  padding-left: 40px;
+  padding-top: 40px;
+  width: 75%;
+}
+app-thumbnail-video {
+  width: 100%;
+  max-height: 200px;
+}

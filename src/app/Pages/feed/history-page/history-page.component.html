@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Watch history</h2>
+  <div class="watch-history">
+    <app-thumbnail-video
+      *ngFor="let video of videos"
+      [video]="video"
+    ></app-thumbnail-video>
+  </div>
+</div>

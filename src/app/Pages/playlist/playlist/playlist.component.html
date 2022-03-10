@@ -1,0 +1,14 @@
+<div class="playlist-container">
+  <section class="playlist-title">
+    <div class="playlist-img">
+      <img [src]="lastImg" alt="playlist-poster" />
+    </div>
+    <h3>{{ title }}</h3>
+  </section>
+  <section class="playlist-videos">
+    <app-thumbnail-video
+      *ngFor="let video of Playlistvideos"
+      [video]="video"
+    ></app-thumbnail-video>
+  </section>
+</div>

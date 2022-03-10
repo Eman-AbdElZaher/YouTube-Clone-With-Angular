@@ -1,0 +1,15 @@
+<div class="thumbnail-video">
+  <app-video-poster [videoImage]="video.image"></app-video-poster>
+  <div class="video-details">
+    <app-video-title [videoTitle]="video.title"></app-video-title>
+    <div class="video-info">
+      <div class="channel-name">
+        <a href="">{{ video.channelName }}</a>
+      </div>
+      <div class="vd-meta" [hidden]="video.views === '0 views'">
+        <span class="views">{{ video.views }}</span>
+      </div>
+    </div>
+    <app-video-desc [videoDesc]="video.desc"></app-video-desc>
+  </div>
+</div>

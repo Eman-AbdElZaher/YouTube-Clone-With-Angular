@@ -1,0 +1,10 @@
+p {
+  color: #444;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 18px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

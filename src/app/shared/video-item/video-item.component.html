@@ -1,0 +1,25 @@
+<div class="video-item">
+  <div class="video-poster">
+    <img [src]="video.image" alt="" />
+  </div>
+  <div class="video-details">
+    <img
+      *ngIf="video.channelImage"
+      [src]="video.channelImage"
+      alt="video-poster"
+      class="channel-img"
+    />
+    <div class="video-meta">
+      <h3 class="video-title">{{ video.title }}</h3>
+      <div class="info">
+        <div class="channel-name">
+          <a href="">{{ video.channelName }}</a>
+        </div>
+        <div class="meta">
+          <span class="views">{{ video.views }} .</span>
+          <span class="period">{{ video.period }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<section class="history">
+  <div class="sec-header">
+    <div class="sec-title">
+      <i class="material-icons-outlined">history</i>
+      <span>History</span>
+    </div>
+    <a routerLink="/feed/history">See All</a>
+  </div>
+  <div class="videos-container" *ngIf="videos != []">
+    <app-video-item
+      *ngFor="let video of videos"
+      [video]="video"
+    ></app-video-item>
+  </div>
+  <p *ngIf="videos === []">Videos that you watch will be shown here</p>
+</section>
+<section class="watch-later">
+  <div class="sec-header">
+    <div class="sec-title">
+      <i class="material-icons-outlined"> watch_later </i>
+      <span>Watch Later</span>
+    </div>
+    <a navLink="/history">See All</a>
+  </div>
+  <div class="videos-container" *ngIf="WatchVideos.length != 0">
+    <app-video-item
+      *ngFor="let video of WatchVideos"
+      [video]="video"
+    ></app-video-item>
+  </div>
+  <p *ngIf="WatchVideos.length === 0">
+    Videos that you be save in watch later will be shown here
+  </p>
+</section>
+<section class="liked-videos">
+  <div class="sec-header">
+    <div class="sec-title">
+      <i class="material-icons-outlined"> thumb_up </i>
+      <span>Liked Videos</span>
+    </div>
+    <a navLink="/history">See All</a>
+  </div>
+  <div class="videos-container" *ngIf="likedVideos.length != 0">
+    <app-video-item
+      *ngFor="let video of likedVideos"
+      [video]="video"
+    ></app-video-item>
+  </div>
+  <p *ngIf="likedVideos.length === 0">
+    Videos that you be saved in Liked Videos will be shown here
+  </p>
+</section>

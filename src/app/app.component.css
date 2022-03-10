@@ -1,0 +1,40 @@
+app-youtube-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+  background-color: #fff;
+}
+.app-content {
+  margin-top: 60px;
+  display: flex;
+  width: 100vw;
+}
+.main-content {
+  width: calc(100vw - 240px);
+  background-color: #f1f1f1;
+  margin-left: 240px;
+}
+app-aside-nav {
+  width: 240px;
+  height: calc(100vh - 60px);
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+}
+
+app-aside-nav:hover {
+  overflow-y: scroll;
+}
+@media (max-width: 800px) {
+  app-aside-nav {
+    left: -240px;
+    display: none;
+  }
+  .main-content {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
